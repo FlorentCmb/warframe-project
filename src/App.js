@@ -10,18 +10,7 @@ import Warframes from './screen/Warframes'
 import './App.css'
 import Header from './components/Header'
 
-// Require warframe db
-const warframes = require('warframe-items/data/json/Warframes.json')
-
 export default class App extends React.Component {
-
-  state = {
-    isReady: false
-  }
-
-  componentDidMount() {
-    this.setState({ warframeDatas: warframes, isReady: true })
-  }
   
   render() {
 
@@ -37,7 +26,7 @@ export default class App extends React.Component {
             <Home />
           </Route>
           <Route path='/warframes'>
-            <Warframes warframes={this.state.warframeDatas} />
+            <Warframes />
           </Route>
           <Route>
             {/* Weapons */}
