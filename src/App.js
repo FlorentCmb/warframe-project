@@ -24,8 +24,6 @@ export default class App extends React.Component {
   }
   
   render() {
-    
-    console.log(this.state.warframeDatas)
 
     return (
 
@@ -39,7 +37,7 @@ export default class App extends React.Component {
             <Home />
           </Route>
           <Route path='/warframes'>
-            <Warframes />
+            <Warframes warframes={this.state.warframeDatas} />
           </Route>
           <Route>
             {/* Weapons */}
