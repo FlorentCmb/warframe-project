@@ -10,15 +10,18 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
-        <div className="section1">
-          <h1>JAJ</h1>
+      <div>
+
+        <div className="page-one">
+          <h2>Game</h2>
         </div>
-        <div className="section2">
-          JOJ
+
+        <div id="page-two">
+          <h2>jaj</h2>
         </div>
-        <div className="section3">
-          JEJ
+
+        <div className="three">
+          <h2>La team, le sang</h2>
         </div>
       </div>
     )

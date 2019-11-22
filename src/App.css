@@ -1,17 +1,26 @@
-.section1{
-    background-color: red;
-    height: 100%;
-    width: 100%;
+html, body, #page-one, #page-two, #page-three {
+    height: auto;
+    min-height: 100vh;
 }
 
-.section2{
-    background-color: green;
-    height: 100%;
-    width: 100%;
+#page-one, #page-two, #page-three {
+    padding-top: 2em;
 }
 
-.section3{
-    background-color: blue;
-    height: 100%;
-    width: 100%;
+h2 {
+    font-size: 3em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+#page-one {
+    background-color: #fff;
+}
+
+#page-two {
+    background-color: #ccc;
+}
+
+#page-three {
+    background-color: #aaa;
 }
