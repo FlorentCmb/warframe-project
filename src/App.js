@@ -25,12 +25,15 @@ export default class App extends React.Component {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route>
+
+          <Route path='/warframes'>
             {/* Warframe */}
           </Route>
-          <Route path='/weapons'>
+
+          <Route path='/weaponsjaaj'>
             <Weapons />
           </Route>
+
           <Route>
             {/* Mods */}
           </Route>

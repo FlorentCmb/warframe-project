@@ -9,22 +9,29 @@ const melee = require('warframe-items/data/json/Melee.json')
 export default class Weapons extends React.Component {
 
     state = {
-        primary: null,
-        secondary: null,
-        melee: null,
-        weapons: null
+        weapons: null,
+        isReady: false
     }
 
     componentDidMount() {
-        this.setState({ primary: primary, secondary: secondary, melee: melee })
-        this.setState({ weapons: primary })
-        console.log('jaaj')
+        this.setState({ weapons: primary.concat(secondary, melee), isReady: true })
+    }
+
+    getARandomWeapon = () => {
+        if (this.state.isReady) {
+            const min = 0
+            const max = this.state.weapons.length
+            const random = Math.floor(Math.random() * (max - min + 1))
+            document.querySelector('.Weapon-Container').innerHTML = `
+            <p>${this.state.weapons[random].name}</p>`
+        }
     }
 
     render() {
+        console.log(this.state.weapons)
         return (
-            <div className="Weapon-Page">
-                Jaaj
+            <div className="Weapon-Page" onLoad={this.getARandomWeapon()}>
+                <div className="Weapon-Container"></div>
             </div>
         )
     }
