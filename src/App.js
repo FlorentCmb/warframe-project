@@ -34,18 +34,6 @@ export default class App extends React.Component {
           </Route>
 
         </Switch>
-      
-        <div className="page-one">
-          <h2>Game</h2>
-        </div>
-
-        <div id="page-two">
-          <h2>jaj</h2>
-        </div>
-
-        <div className="three">
-          <h2>La team, le sang</h2>
-        </div>
 
       </div>
     )
