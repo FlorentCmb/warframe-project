@@ -1,0 +1,26 @@
+html, body, #page-one, #page-two, #page-three {
+    height: auto;
+    min-height: 100vh;
+}
+
+#page-one, #page-two, #page-three {
+    padding-top: 2em;
+}
+
+h2 {
+    font-size: 3em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+#page-one {
+    background-color: #fff;
+}
+
+#page-two {
+    background-color: #ccc;
+}
+
+#page-three {
+    background-color: #aaa;
+}

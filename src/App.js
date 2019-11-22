@@ -1,6 +1,7 @@
 // Import librairies
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
+import Home from './screen/Home'
 
 
 // Import styles
@@ -20,7 +21,7 @@ export default class App extends React.Component {
         <Switch>
 
           <Route>
-            {/* Home */}
+            <Home />
           </Route>
           <Route>
             {/* Warframe */}
