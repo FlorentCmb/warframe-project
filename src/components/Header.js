@@ -10,10 +10,10 @@ export default class Header extends React.Component {
     render() {
         return(
             <div className="Header">
-                <a className="Header-Link" href="/"><span className="Header-Text">Home</span></a>
-                <a className="Header-Link" href="/warframes"><span className="Header-Text">Warframes</span></a>
-                <a className="Header-Link" href="/weapons"><span className="Header-Text">Weapons</span></a>
-                <a className="Header-Link" href="/mods"><span className="Header-Text">Mods</span></a>
+                <Link className="Header-Link" to="/"><span className="Header-Text">Home</span></Link>
+                <Link className="Header-Link" to="/warframes"><span className="Header-Text">Warframes</span></Link>
+                <Link className="Header-Link" to="/weapons"><span className="Header-Text">Weapons</span></Link>
+                <Link className="Header-Link" to="/mods"><span className="Header-Text">Mods</span></Link>
             </div>
         )
     }
