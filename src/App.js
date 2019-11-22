@@ -8,9 +8,22 @@ import Home from './screen/Home'
 import './App.css'
 import Header from './components/Header'
 
+// Require warframe db
+const warframes = require('warframe-items/data/json/Warframes.json')
+
 export default class App extends React.Component {
 
+  state = {
+    isReady: false
+  }
+
+  componentDidMount() {
+    this.setState({ warframeDatas: warframes, isReady: true })
+  }
+  
   render() {
+    
+    console.log(this.state.warframeDatas)
 
     return (
 
