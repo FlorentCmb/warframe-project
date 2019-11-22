@@ -1,0 +1,22 @@
+.Header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background: cadetblue;
+}
+
+.Header-Link {
+    margin: auto;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+    font-family: 'Alata', sans-serif;
+}
+
+.Header-Link:hover {
+    cursor: pointer;
+    background: rgb(102, 168, 172);
+    color: white;
+    transform: skewx(-6deg);
+}

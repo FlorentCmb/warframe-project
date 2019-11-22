@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 
 // Import styles
 import './App.css'
+import Header from './components/Header'
 
 export default class App extends React.Component {
 
@@ -13,7 +14,9 @@ export default class App extends React.Component {
     return (
 
       <div className="App">
-        {/* Header */}
+
+        <Header />
+
         <Switch>
 
           <Route>
@@ -42,6 +45,7 @@ export default class App extends React.Component {
         <div className="three">
           <h2>La team, le sang</h2>
         </div>
+
       </div>
     )
   }
