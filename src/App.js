@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 
 // Import components & screens
 import Home from './screen/Home'
-import Weapons from './screen/Weapons'
+import Weapons from './screen/WeaponsList'
 
 // Import styles
 import './App.css'
@@ -30,7 +30,7 @@ export default class App extends React.Component {
             {/* Warframe */}
           </Route>
 
-          <Route path='/weaponsjaaj'>
+          <Route path='/weapons'>
             <Weapons />
           </Route>
 

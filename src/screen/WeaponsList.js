@@ -1,6 +1,10 @@
 // Import librairies
 import React from 'react'
 
+// Import screens & components
+import WeaponCard from '../components/WeaponCard'
+
+
 // Require weapons db
 const primary = require('warframe-items/data/json/Primary.json')
 const secondary = require('warframe-items/data/json/Secondary.json')
@@ -17,21 +21,17 @@ export default class Weapons extends React.Component {
         this.setState({ weapons: primary.concat(secondary, melee), isReady: true })
     }
 
-    getARandomWeapon = () => {
+    displayList = () => {
         if (this.state.isReady) {
-            const min = 0
-            const max = this.state.weapons.length
-            const random = Math.floor(Math.random() * (max - min + 1))
-            document.querySelector('.Weapon-Container').innerHTML = `
-            <p>${this.state.weapons[random].name}</p>`
+            this.state.weapons.map(item => (<WeaponCard weapon={item} />))
+            
         }
     }
 
     render() {
-        console.log(this.state.weapons)
         return (
-            <div className="Weapon-Page" onLoad={this.getARandomWeapon()}>
-                <div className="Weapon-Container"></div>
+            <div className="Weapon-Page">
+                {this.displayList()}
             </div>
         )
     }
