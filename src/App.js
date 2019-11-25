@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 
 // Import components & screens
 import Home from './screen/Home'
-import Weapons from './screen/WeaponsList'
+import WeaponsList from './screen/WeaponsList'
 
 // Import styles
 import './App.css'
@@ -31,7 +31,7 @@ export default class App extends React.Component {
           </Route>
 
           <Route path='/weapons'>
-            <Weapons />
+            <WeaponsList />
           </Route>
 
           <Route>

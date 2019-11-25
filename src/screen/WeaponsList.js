@@ -21,17 +21,10 @@ export default class Weapons extends React.Component {
         this.setState({ weapons: primary.concat(secondary, melee), isReady: true })
     }
 
-    displayList = () => {
-        if (this.state.isReady) {
-            this.state.weapons.map(item => (<WeaponCard weapon={item} />))
-            
-        }
-    }
-
     render() {
         return (
             <div className="Weapon-Page">
-                {this.displayList()}
+                {this.state.isReady ? this.state.weapons.map((item, index) => <WeaponCard weapon={item} currentIndex={index} arraysLength={[primary.length, secondary.length, melee.length]} key={index} />) : "Loading"}
             </div>
         )
     }
