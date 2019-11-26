@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import WarframeCard from '../components/WarframeCard';
 
+import './WarframePage.css'
+
 
 // Je déclare ma const ainsi que ma state
 const WarframeList = () => {
@@ -18,8 +20,7 @@ const WarframeList = () => {
 
 
     return (
-        <div>
-            <p>Jaj</p>
+        <div className="Warframe-Page">
             {listFrame.map(item => <WarframeCard warframe={item}/>)}
         </div>
     );
