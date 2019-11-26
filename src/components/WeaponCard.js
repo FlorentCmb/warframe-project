@@ -10,7 +10,7 @@ const WeaponCard = ({ weapon }) => {
         <div className="Weapon-Card">
             <p>{weapon.name}</p>
             <p>{weapon.type}</p>
-            <img className="Card-Img" src={`./img/${weapon.imageName}`} alt={weapon.name} />
+            <img className="Weapon-Img" src={`./img/${weapon.imageName}`} alt={weapon.name} />
         </div>
     )
 }
