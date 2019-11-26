@@ -10,37 +10,36 @@ import WeaponsList from './screen/WeaponsList'
 import './App.css'
 import Header from './components/Header'
 
-export default class App extends React.Component {
+const App = () => {
 
-  render() {
+  return (
 
-    return (
+    <div className="App">
 
-      <div className="App">
+      <Header />
 
-        <Header />
+      <Switch>
 
-        <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
 
-          <Route exact path='/'>
-            <Home />
-          </Route>
+        <Route path='/warframes'>
+          {/* Warframe */}
+        </Route>
 
-          <Route path='/warframes'>
-            {/* Warframe */}
-          </Route>
+        <Route path='/weapons'>
+          <WeaponsList />
+        </Route>
 
-          <Route path='/weapons'>
-            <WeaponsList />
-          </Route>
+        <Route>
+          {/* Mods */}
+        </Route>
 
-          <Route>
-            {/* Mods */}
-          </Route>
+      </Switch>
 
-        </Switch>
-
-      </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default App

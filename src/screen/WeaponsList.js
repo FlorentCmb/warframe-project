@@ -1,31 +1,38 @@
 // Import librairies
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Import screens & components
 import WeaponCard from '../components/WeaponCard'
 
 
-// Require weapons db
-const primary = require('warframe-items/data/json/Primary.json')
-const secondary = require('warframe-items/data/json/Secondary.json')
-const melee = require('warframe-items/data/json/Melee.json')
 
-export default class Weapons extends React.Component {
+const Weapons = () => {
 
-    state = {
-        weapons: null,
-        isReady: false
+    const [weapons, setweapons] = useState(null)
+    const [isReady, setisReady] = useState(false)
+    // primary.concat(secondary, melee)
+
+    const getWeapons = async () => {
+        // Require weapons db
+        const primary = await require('warframe-items/data/json/Primary.json')
+        const secondary = await require('warframe-items/data/json/Secondary.json')
+        const melee = await require('warframe-items/data/json/Melee.json')
+
+        // Change the state values
+        setweapons(primary.concat(secondary, melee))
+        setisReady(true)
     }
 
-    componentDidMount() {
-        this.setState({ weapons: primary.concat(secondary, melee), isReady: true })
-    }
+    useEffect(() => {
+        getWeapons()
+    }, [])
 
-    render() {
-        return (
-            <div className="Weapon-Page">
-                {this.state.isReady ? this.state.weapons.map((item, index) => <WeaponCard weapon={item} currentIndex={index} arraysLength={[primary.length, secondary.length, melee.length]} key={index} />) : "Loading"}
-            </div>
-        )
-    }
+    return (
+        <div className="Weapon-Page">
+            {isReady ? weapons.map((item, index) => <WeaponCard weapon={item} key={index} />) : "Loading"}
+        </div>
+    )
+
 }
+
+export default Weapons
