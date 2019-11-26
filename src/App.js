@@ -4,40 +4,37 @@ import { Switch, Route } from 'react-router-dom'
 
 // Import components & screens
 import Home from './screen/Home'
+import WeaponsList from './screen/WeaponsList'
 import Warframes from './screen/Warframes'
+import Header from './components/Header'
 
 // Import styles
 import './App.css'
-import Header from './components/Header'
 
-export default class App extends React.Component {
-  
-  render() {
+const App = () => {
 
-    return (
+  return (
 
-      <div className="App">
+    <div className="App">
 
-        <Header />
+      <Header />
 
-        <Switch>
-
+      </Switch>
           <Route exact path='/'>
             <Home />
           </Route>
           <Route path='/warframes'>
             <Warframes />
           </Route>
-          <Route>
-            {/* Weapons */}
+          <Route path='/weapons'>
+            <WeaponsList />
           </Route>
           <Route>
             {/* Mods */}
           </Route>
-
-        </Switch>
-
-      </div>
-    )
-  }
+      </Switch>
+    </div>
+  )
 }
+
+export default App
