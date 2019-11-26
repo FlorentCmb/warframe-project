@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react'
 // Import screens & components
 import WeaponCard from '../components/WeaponCard'
 
-
+// Import styles
+import './WeaponsList.css'
 
 const Weapons = () => {
 

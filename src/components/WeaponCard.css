@@ -2,4 +2,10 @@
     color: darkred;
     border: 2px solid black;
     width: 23%;
+    margin-top: 1%;
+}
+
+.Card-Img {
+    width: 100%;
+    height: auto;
 }
