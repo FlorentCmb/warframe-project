@@ -5,10 +5,11 @@ import { Switch, Route } from 'react-router-dom'
 // Import components & screens
 import Home from './screen/Home'
 import WeaponsList from './screen/WeaponsList'
+import Warframes from './screen/Warframes'
+import Header from './components/Header'
 
 // Import styles
 import './App.css'
-import Header from './components/Header'
 
 const App = () => {
 
@@ -18,26 +19,20 @@ const App = () => {
 
       <Header />
 
-      <Switch>
-
-        <Route exact path='/'>
-          <Home />
-        </Route>
-
-        <Route path='/warframes'>
-          {/* Warframe */}
-        </Route>
-
-        <Route path='/weapons'>
-          <WeaponsList />
-        </Route>
-
-        <Route>
-          {/* Mods */}
-        </Route>
-
       </Switch>
-
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/warframes'>
+            <Warframes />
+          </Route>
+          <Route path='/weapons'>
+            <WeaponsList />
+          </Route>
+          <Route>
+            {/* Mods */}
+          </Route>
+      </Switch>
     </div>
   )
 }

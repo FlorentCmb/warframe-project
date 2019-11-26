@@ -1,0 +1,11 @@
+.Warframe-Card {
+    color : blue;
+    border: 2px solid black;
+    width: 48%;
+    margin-top: 1%;
+}
+
+.Warframe-Img {
+    width: 100%;
+    height: auto;
+}
