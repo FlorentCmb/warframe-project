@@ -19,7 +19,7 @@ const App = () => {
 
       <Header />
 
-      </Switch>
+      <Switch>
           <Route exact path='/'>
             <Home />
           </Route>
