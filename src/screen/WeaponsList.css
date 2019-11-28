@@ -1,5 +1,28 @@
 .Weapon-Page {
+    background: rgba(128, 128, 128, 0.13);
+}
+
+.Weapon-Filter {
+    width: 90%;
+    margin: auto;
+    padding: 1% 0%;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.Weapon-Filter input, select {
+    width: 20%;
+    margin: auto;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.Weapon-List {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
 }

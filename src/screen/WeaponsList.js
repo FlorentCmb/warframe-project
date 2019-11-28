@@ -27,7 +27,7 @@ const Weapons = () => {
         setisReady(true)
     }
 
-    // Function changing input's value, and filter weapons
+    // Function changing input's value and return filtered weapons
     const handleInput = (e) => {
         // Change state's value
         setinputValue(e.target.value)
@@ -36,7 +36,7 @@ const Weapons = () => {
         setfilter(filteredArray)
     }
 
-    // Function getting the select value
+    // Function getting the select value and return filtered weapons
     const handleSelect = (e) => {
         // Filter the weapon's state
         if (e.target.value !== "All") {
@@ -54,50 +54,52 @@ const Weapons = () => {
     }, [])
 
     return (
-        <div>
+        <div className="Weapon-Page">
             <div className="Weapon-Filter">
-                <input type="text" value={inputValue} onChange={handleInput} placeholder="Search a weapon" />
-                <select onChange={handleSelect}>
-                    <option value={null}>All</option>
-                    <option value="Rifle">Rifles</option>
-                    <option value="Shotgun">Shotguns</option>
-                    <option value="Crossbow">Crossbows</option>
+                <label htmlFor="name">Weapon name</label>
+                <input name="name" type="text" value={inputValue} onChange={handleInput} placeholder="Search a weapon" />
+                <label htmlFor="type">Weapon type</label>
+                <select name="type" onChange={handleSelect}>
+                    <option value="All">All</option>
+                    <option value="Blade and Whip">Blades and Whips</option>
                     <option value="Bow">Bows</option>
-                    <option value="Speargun">Spearguns</option>
-                    <option value="Sniper Rifle">Sniper Rifles</option>
-                    <option value="Launcher">Launchers</option>
-                    <option value="Pistol">Pistols</option>
+                    <option value="Claws">Claws</option>
+                    <option value="Crossbow">Crossbows</option>
+                    <option value="Dagger">Daggers</option>
+                    <option value="Dual Daggers">Dual Daggers</option>
                     <option value="Dual Pistols">Dual Pistols</option>
                     <option value="Dual Shotguns">Dual Shotguns</option>
-                    <option value="Shotgun Sidearm">Shotgun Sidearms</option>
-                    <option value="Thrown">Throwns</option>
-                    <option value="Glaive">Glaives</option>
-                    <option value="Sword and Shield">Swords and Shields</option>
-                    <option value="Staff">Staffs</option>
-                    <option value="Scythe">Scythes</option>
-                    <option value="Fist">Fists</option>
-                    <option value="Hammer">Hammers</option>
-                    <option value="Whip">Whips</option>
-                    <option value="Tonfa">Tonfas</option>
-                    <option value="Sword">Swords</option>
-                    <option value="Polearm">Polearms</option>
-                    <option value="Dagger">Daggers</option>
-                    <option value="Rapier">Rapiers</option>
                     <option value="Dual Swords">Dual Swords</option>
-                    <option value="Nikana">Nikanas</option>
-                    <option value="Dual Daggers">Dual Daggers</option>
-                    <option value="Heavy Blade">Heavy Blades</option>
-                    <option value="Machete">Machetes</option>
-                    <option value="Warfan">Warfans</option>
-                    <option value="Sparring">Sparrings</option>
-                    <option value="Blade and Whip">Blades and Whips</option>
-                    <option value="Nunchaku">Nunchakus</option>
+                    <option value="Fist">Fists</option>
+                    <option value="Glaive">Glaives</option>
                     <option value="Gunblade">Gunblades</option>
-                    <option value="Claws">Claws</option>
+                    <option value="Hammer">Hammers</option>
+                    <option value="Heavy Blade">Heavy Blades</option>
+                    <option value="Launcher">Launchers</option>
+                    <option value="Machete">Machetes</option>
+                    <option value="Nikana">Nikanas</option>
+                    <option value="Nunchaku">Nunchakus</option>
+                    <option value="Pistol">Pistols</option>
+                    <option value="Polearm">Polearms</option>
+                    <option value="Rapier">Rapiers</option>
+                    <option value="Rifle">Rifles</option>
+                    <option value="Scythe">Scythes</option>
+                    <option value="Shotgun">Shotguns</option>
+                    <option value="Shotgun Sidearm">Shotgun Sidearms</option>
+                    <option value="Sniper Rifle">Sniper Rifles</option>
+                    <option value="Sparring">Sparrings</option>
+                    <option value="Speargun">Spearguns</option>
+                    <option value="Staff">Staffs</option>
+                    <option value="Sword">Swords</option>
+                    <option value="Sword and Shield">Swords and Shields</option>
+                    <option value="Thrown">Throwns</option>
+                    <option value="Tonfa">Tonfas</option>
                     <option value="Two-Handed Nikana">Two-Handed Nikana</option>
+                    <option value="Warfan">Warfans</option>
+                    <option value="Whip">Whips</option>
                 </select>
             </div>
-            <div className="Weapon-Page">
+            <div className="Weapon-List">
                 {isReady ? filter === null ? weapons.map((item, index) => <WeaponCard weapon={item} key={index} />) : filter.map((item, index) => <WeaponCard weapon={item} key={index} />) : "Loading"}
             </div>
         </div>
