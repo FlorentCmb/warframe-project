@@ -30,7 +30,7 @@ const specialWeaponAnimation = name => {
 const WeaponCard = ({ weapon }) => {
 
     return (
-        <Link className={`Weapon-Card ${specialWeaponAnimation(weapon.name)}`} >
+        <Link to={`/weapons/${weapon.name}`} className={`Weapon-Card ${specialWeaponAnimation(weapon.name)}`} >
             <img className="Weapon-Img" src={`./img/${weapon.imageName}`} alt={weapon.name} />
             <p className="Card-Text">{weapon.name} ({weapon.type})</p>
             <p className="Card-Desc">{weapon.description}</p>
