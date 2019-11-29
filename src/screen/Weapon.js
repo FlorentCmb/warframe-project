@@ -33,10 +33,17 @@ const Weapon = () => {
         getWeaponWithUrl()
     }, [])
 
+
     return (
-        <div>
-            {weapon !== null ? weapon.name : 'Loading'}
-        </div>
+        <>
+            {weapon !== null ? (
+                <div>
+                    <h3>{weapon.name}</h3>
+                    <p>It's a {weapon.category} weapon</p>
+                </div>
+            ) : ''}
+        </>
     )
+
 }
 export default Weapon
