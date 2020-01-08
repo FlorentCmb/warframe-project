@@ -36,7 +36,7 @@ const Weapon = () => {
     const displayDmg = () => {
         const damages = []
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
-            damages.push(<p>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</p>)
+        damages.push(<li>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</li>)
         }
         return(damages)
     }
@@ -52,10 +52,14 @@ const Weapon = () => {
                 <div className="Weapon">
                     <h3>{weapon.name}</h3>
                     <p>"{weapon.description}"</p>
-                    <p>{weapon.category} ({weapon.type}) weapon</p>
                     <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
+                    <p>{weapon.category} weapon ({weapon.type})</p>
                     <div className="Weapon-Dammage">
-                        {displayDmg()}
+                        Damages :
+                        <ul>
+                            {displayDmg()}
+                        </ul>
+                        {/* Add area attack here */}
                     </div>
                 </div>
             ) : (<p>Sorry, an error has occured.</p>)}
