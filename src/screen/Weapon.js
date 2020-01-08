@@ -50,22 +50,31 @@ const Weapon = () => {
         <div>
             {weapon !== null ? (
                 <div className="Weapon">
-                    <h3>{weapon.name}</h3>
-                    <p>"{weapon.description}"</p>
-                    <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
-                    <p>{weapon.category} weapon ({weapon.type})</p>
-                    <div className="Weapon-Specifications">
-                        Default stats of {weapon.name}
-                        <div className="Weapon-Dammage">
-                            Damages :
-                            <ul>
-                                {displayDmg()}
-                            </ul>
+                    <div>
+                        <h3 className="Weapon-Title">{weapon.name}</h3>
+                        <p className="Weapon-Desc">"{weapon.description}"</p>
+                    </div>
+                    <div className="Weapon-Section">
+                        <div className="Weapon-Main-Img">
+                            <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
                         </div>
-                        {/* Add area attack here */}
-                        <div className="Weapon-Crit">
-                            <p>Crit. rate : {Math.round(weapon.criticalChance * 100 * 100) / 100}%</p>
-                            <p>Crit. multiplier : {weapon.criticalMultiplier}</p>
+                        <div className="Weapon-Specifications">
+                            <p>{weapon.category} weapon ({weapon.type})</p>
+                            Default stats of {weapon.name} :
+                            <div className="Weapon-Dammage">
+                                Damages :
+                                <ul>
+                                    {displayDmg()}
+                                </ul>
+                            </div>
+                            {/* Add area attack here */}
+                            <div className="Weapon-Crit">
+                                <p>Crit. rate : {Math.round(weapon.criticalChance * 100 * 100) / 100}%</p>
+                                <p>Crit. multiplier : {weapon.criticalMultiplier}</p>
+                            </div>
+                            <div className="Weapon-Status">
+                                <p>Status chance : {Math.round(weapon.procChance * 100 * 100) / 100}%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
