@@ -10,7 +10,7 @@
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .Weapon-Intro h3 {
@@ -19,6 +19,8 @@
     font-family: 'Alata', sans-serif;
     font-size: 300%;
     padding-top: 20%;
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+    text-shadow: 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253)
 }
 
 .Weapon-Filter {
