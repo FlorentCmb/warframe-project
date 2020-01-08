@@ -36,9 +36,9 @@ const Weapon = () => {
     const displayDmg = () => {
         const damages = []
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
-        damages.push(<li>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</li>)
+            damages.push(<li>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</li>)
         }
-        return(damages)
+        return (damages)
     }
 
     useEffect(() => {
@@ -54,12 +54,19 @@ const Weapon = () => {
                     <p>"{weapon.description}"</p>
                     <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
                     <p>{weapon.category} weapon ({weapon.type})</p>
-                    <div className="Weapon-Dammage">
-                        Damages :
-                        <ul>
-                            {displayDmg()}
-                        </ul>
+                    <div className="Weapon-Specifications">
+                        Default stats of {weapon.name}
+                        <div className="Weapon-Dammage">
+                            Damages :
+                            <ul>
+                                {displayDmg()}
+                            </ul>
+                        </div>
                         {/* Add area attack here */}
+                        <div className="Weapon-Crit">
+                            <p>Crit. rate : {Math.round(weapon.criticalChance * 100 * 100) / 100}%</p>
+                            <p>Crit. multiplier : {weapon.criticalMultiplier}</p>
+                        </div>
                     </div>
                 </div>
             ) : (<p>Sorry, an error has occured.</p>)}
