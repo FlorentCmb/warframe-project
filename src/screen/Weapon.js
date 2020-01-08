@@ -34,9 +34,16 @@ const Weapon = () => {
 
     // Allow to display weapons damages and its percentage
     const displayDmg = () => {
+        // The array that will receive all JSX lines from damageTypes object
         const damages = []
+        // Define if we can display a percentage of damage (will be modified)
+        let percentage = weapon.damage
+        if (typeof weapon.damage === "string" && weapon.damage.includes(' ')) {
+            percentage = weapon.damage.split('.')[0]
+        }
+        // Looping in the damageTypes object to get the key and its value
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
-            damages.push(<li>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</li>)
+            damages.push(<li key={key}>{key} : {value} ({Math.round((value * 100 / percentage) * 100) / 100} %)</li>)
         }
         return (damages)
     }
@@ -70,7 +77,7 @@ const Weapon = () => {
                             {/* Add area attack here */}
                             <div className="Weapon-Crit">
                                 <p>Crit. rate : {Math.round(weapon.criticalChance * 100 * 100) / 100}%</p>
-                                <p>Crit. multiplier : {weapon.criticalMultiplier}</p>
+                                <p>Crit. multiplier : {Math.round(weapon.criticalMultiplier * 10) / 10}</p>
                             </div>
                             <div className="Weapon-Status">
                                 <p>Status chance : {Math.round(weapon.procChance * 100 * 100) / 100}%</p>
