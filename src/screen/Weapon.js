@@ -32,6 +32,15 @@ const Weapon = () => {
         setweapon(weaponObject)
     }
 
+    // Allow to display weapons damages and its percentage
+    const displayDmg = () => {
+        const damages = []
+        for (let [key, value] of Object.entries(weapon.damageTypes)) {
+            damages.push(<p>{key} : {value} ({Math.round((value * 100 / weapon.damage) * 100) / 100}%)</p>)
+        }
+        return(damages)
+    }
+
     useEffect(() => {
         getWeaponWithUrl()
     }, [])
@@ -45,6 +54,9 @@ const Weapon = () => {
                     <p>"{weapon.description}"</p>
                     <p>{weapon.category} ({weapon.type}) weapon</p>
                     <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
+                    <div className="Weapon-Dammage">
+                        {displayDmg()}
+                    </div>
                 </div>
             ) : (<p>Sorry, an error has occured.</p>)}
         </div>
