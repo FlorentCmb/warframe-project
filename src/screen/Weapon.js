@@ -1,6 +1,9 @@
 // Import librairies
 import React, { useState, useEffect } from 'react'
 
+// Styles
+import './Weapon.css'
+
 const Weapon = () => {
 
     // State containing current weapon
@@ -35,14 +38,16 @@ const Weapon = () => {
 
 
     return (
-        <>
+        <div>
             {weapon !== null ? (
-                <div>
+                <div className="Weapon">
                     <h3>{weapon.name}</h3>
-                    <p>It's a {weapon.category} weapon</p>
+                    <p>"{weapon.description}"</p>
+                    <p>{weapon.category} ({weapon.type}) weapon</p>
+                    <img src={`../img/${weapon.imageName}`} alt={weapon.name} />
                 </div>
-            ) : ''}
-        </>
+            ) : (<p>Sorry, an error has occured.</p>)}
+        </div>
     )
 
 }
