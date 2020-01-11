@@ -15,10 +15,9 @@ const Weapon = () => {
         const url = window.location.href
         let currentWeaponName = url.split('/')
         currentWeaponName = currentWeaponName[currentWeaponName.length - 1]
-        // Replacing '%20' by ' '
-        if (currentWeaponName.includes('%20')) {
-            currentWeaponName = currentWeaponName.replace('%20', ' ')
-        }
+
+        // Remove the '%20' characters from the weapon name to require the right one
+        currentWeaponName = currentWeaponName.split('%20').join(' ')
 
         // Require weapons
         const primary = await require('warframe-items/data/json/Primary.json')
@@ -36,11 +35,14 @@ const Weapon = () => {
     const displayDmg = () => {
         // The array that will receive all JSX lines from damageTypes object
         const damages = []
-        // Define if we can display a percentage of damage (will be modified)
-        let percentage = weapon.damage
-        if (typeof weapon.damage === "string" && weapon.damage.includes(' ')) {
-            percentage = weapon.damage.split('.')[0]
+
+        // Define the total amount of damages, to get the right percentage
+        let percentage = 0
+        for (let [key, value] of Object.entries(weapon.damageTypes)) {
+            percentage += value
         }
+        console.log(weapon)
+
         // Looping in the damageTypes object to get the key and its value
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
             damages.push(<li key={key}>{key} : {value} ({Math.round((value * 100 / percentage) * 100) / 100} %)</li>)
@@ -81,6 +83,9 @@ const Weapon = () => {
                             </div>
                             <div className="Weapon-Status">
                                 <p>Status chance : {Math.round(weapon.procChance * 100 * 100) / 100}%</p>
+                            </div>
+                            <div className="Weapon-Disposition">
+                                <p>Riven disposition : {weapon.disposition}/5</p>
                             </div>
                         </div>
                     </div>
