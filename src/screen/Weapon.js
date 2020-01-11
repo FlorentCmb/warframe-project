@@ -47,7 +47,7 @@ const Weapon = () => {
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
             damages.push(<li key={key}>{key} : {value} ({Math.round((value * 100 / percentage) * 100) / 100} %)</li>)
         }
-        return (damages)
+        return damages
     }
 
     useEffect(() => {
