@@ -41,7 +41,6 @@ const Weapon = () => {
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
             percentage += value
         }
-        console.log(weapon)
 
         // Looping in the damageTypes object to get the key and its value
         for (let [key, value] of Object.entries(weapon.damageTypes)) {
