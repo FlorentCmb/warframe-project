@@ -29,7 +29,7 @@ const WarframeList = () => {
 
 
 
-    return (
+    return (ll 
         <div className="Warframe-Page">
             <div>
                 <input type="text" value={myText} onChange={handleChange} />
