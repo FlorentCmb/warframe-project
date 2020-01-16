@@ -1,15 +1,60 @@
-.Home {
+.mainHome {
     padding-top: 4%;
 }
 
-.Home-Game {
-    background-color: #fff;
+h1 {
+    color: white;
 }
 
-.Home-Website {
-    background-color: #ccc;
+.lead {
+    font-size: 1.5rem;
+    color: white;
 }
 
-.Home-Team {
-    background-color: #aaa;
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    background-image: url("https://images8.alphacoders.com/516/516340.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    background-image: url("https://images5.alphacoders.com/999/999097.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    background-image: url("https://images2.alphacoders.com/616/616974.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
