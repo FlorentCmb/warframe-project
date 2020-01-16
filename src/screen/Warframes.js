@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import WarframeCard from '../components/WarframeCard';
+// Librairies
+import React, { useState, useEffect } from 'react'
 
+// Screens & components
+import WarframeCard from '../components/WarframeCard'
+
+// Styles
 import './WarframePage.css'
 
-
-// Je déclare ma const ainsi que ma state
 const WarframeList = () => {
     const [listFrame, setlistFrame] = useState([])
     const [myText, setmyText] = useState("")
@@ -36,7 +38,7 @@ const WarframeList = () => {
                 {isReady ? filter === null ? listFrame.map(item => <WarframeCard warframe={item} />) : filter.map(item => <WarframeCard warframe={item} />) : "Loading.."}
             </div>
         </div>
-    );
+    )
 }
 
 
