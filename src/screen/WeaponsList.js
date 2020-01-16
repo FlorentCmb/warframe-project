@@ -32,19 +32,11 @@ const Weapons = () => {
         getWeapons()
     }, [])
 
-    // Controlled input (filter)
+    // Controlled input
     const handleInput = (e) => {
         setinputValue(e.target.value)
         setfilter(weapons.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase())))
     }
-
-    // Scroll listen (test)
-    window.addEventListener('scroll', e => {
-        let scroll = window.scrollY
-        if (scroll > 370) {
-            console.log('move the filter')
-        }
-    })
 
     return (
         <div className="Weapon-Page">
