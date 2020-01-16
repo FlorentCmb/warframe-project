@@ -29,12 +29,14 @@ const WarframeList = () => {
 
 
 
-    return (ll 
+    return (
         <div className="Warframe-Page">
             <div>
                 <input type="text" value={myText} onChange={handleChange} />
             </div>
-            {isReady ? filter === null ? listFrame.map(item => <WarframeCard warframe={item}/>) : filter.map(item => <WarframeCard warframe={item}/> ) : "Loading.."}
+            <div>
+                {isReady ? filter === null ? listFrame.map(item => <WarframeCard warframe={item} />) : filter.map(item => <WarframeCard warframe={item} />) : "Loading.."}
+            </div>
         </div>
     );
 }
