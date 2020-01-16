@@ -32,7 +32,7 @@
 /* Body */
 /* Filter */
 .Warframe-Page-Filter {
-    width: 30%;
+    width: 20%;
     position: fixed;
     left: 1%;
     top: 10%;
@@ -56,7 +56,7 @@
 }
 
 .Warframe-Page-Filter input {
-    width: 50%;
+    width: 60%;
     border: none ;
     margin: auto;
     font-family: 'Tomorrow', sans-serif;

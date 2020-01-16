@@ -1,5 +1,6 @@
 // Librairies
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 // Styles
 import './WarframeCard.css' 
@@ -7,10 +8,10 @@ import './WarframeCard.css'
 
 const WarframeCard = ({warframe}) => {
     return (
-        <div className="Warframe-Card">
-            <img  className="Warframe-Card-Img" src ={`./img/${warframe.imageName}`} alt={warframe.name}/>
+        <Link to={`/warframes/${warframe.name}`} className="Warframe-Card">
+            <img  className="Warframe-Card-Img" src ={`../img/${warframe.imageName}`} alt={warframe.name}/>
             <p className="Warframe-Card-Name">{warframe.name}</p>
-        </div>
+        </Link>
     )
 }
 

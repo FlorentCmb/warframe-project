@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './screen/Home'
 import WeaponsList from './screen/WeaponsList'
 import WarframesPage from './screen/WarframesPage'
+import Warframe from './screen/Warframe'
 import Header from './components/Header'
 
 // Import styles
@@ -23,8 +24,11 @@ const App = () => {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route path='/warframes'>
+          <Route exact path='/warframes'>
             <WarframesPage />
+          </Route>
+          <Route path='/warframes/:name'>
+            <Warframe />
           </Route>
           <Route path='/weapons'>
             <WeaponsList />

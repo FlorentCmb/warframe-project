@@ -6,6 +6,8 @@
     border-radius: 5px;
     text-align: center;
     transition-duration: 0.5s;
+    text-decoration: none;
+    color: black;
 }
 /* Hover effects */
 .Warframe-Card:hover {
