@@ -11,6 +11,7 @@ const WarframeList = () => {
     const [filter, setFilter] = useState(null)
     const [isReady, setIsReady] = useState(false)
 
+    // Get all the warframes
     useEffect(() => {
         const fetchData = async () => {
             const waframeN = await require('warframe-items/data/json/Warframes.json')
@@ -20,14 +21,11 @@ const WarframeList = () => {
         setIsReady(true)
     }, [])
 
-
+    // Controlled input
     const handleChange = event => {
         setmyText(event.target.value)
         setFilter(listFrame.filter(item => item.name.toLowerCase().includes(event.target.value.toLowerCase())))
-        console.log(filter)
     }
-
-
 
     return (
         <div className="Warframe-Page">
