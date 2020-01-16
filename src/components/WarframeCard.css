@@ -8,6 +8,10 @@
     transition-duration: 0.5s;
 }
 /* Hover effects */
+.Warframe-Card:hover {
+    box-shadow: 2px 2px 5px grey;
+}
+
 .Warframe-Card:hover .Warframe-Card-Name {
     letter-spacing: 3pt;
 }
