@@ -4,6 +4,7 @@
     padding-top: 4%;
 }
 
+/* Intro */
 .Weapon-Intro {
     height: 90vh;
     background-image: url('https://n9e5v4d8.ssl.hwcdn.net/fp-vids/revenant-fallback.jpg');
@@ -12,6 +13,7 @@
     background-attachment: fixed;
     text-align: center;
     color: black;
+    animation: imgZoom infinite 30s;
 }
 
 .Weapon-Intro h3 {
@@ -24,6 +26,8 @@
     text-shadow: 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253);
 }
 
+/* Body */
+/* Filter (visible) */
 .Weapon-Filter {
     width: 96%;
     margin: 0.5% auto;
@@ -36,6 +40,13 @@
     justify-content: center;
     font-family: 'Tomorrow', sans-serif;
 }
+/* Filter (after scroll) */
+.Weapon-Filter-Scroll {
+    width: 50%;
+    display: block;
+    position: fixed;
+    position: 5;
+}
 
 .Weapon-Filter input, select {
     width: 20%;
@@ -47,4 +58,17 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+/* Animations */
+@keyframes imgZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
 }
