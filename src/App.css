@@ -1,3 +1,10 @@
-
+/* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+
+/* General */
+.App {
+    margin: 0;
+    padding: 0;
+}

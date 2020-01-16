@@ -1,11 +1,32 @@
+/* General */
 .Warframe-Card {
-    color : blue;
-    border: 2px solid black;
-    width: 48%;
+    background: white;
+    width: 32%;
     margin-top: 1%;
+    border-radius: 5px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+/* Hover effects */
+.Warframe-Card:hover .Warframe-Card-Name {
+    letter-spacing: 3pt;
 }
 
-.Warframe-Img {
+.Warframe-Card:hover .Warframe-Card-Img {
     width: 100%;
     height: auto;
+}
+
+/* Image of the card */
+.Warframe-Card-Img {
+    width: 90%;
+    height: auto;
+    transition-duration: 0.5s;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+/* Text */
+.Warframe-Card-Name {
+    font-size: 120%;
+    transition-duration: 0.5s;
 }

@@ -1,0 +1,84 @@
+.Warframe-Page {
+    margin: 0;
+    padding: 0;
+    background: rgba(128, 128, 128, 0.13);
+    font-family: 'Tomorrow', sans-serif;
+    padding-top: 4%;
+}
+
+/* Intro */
+.Warframe-Page-Intro {
+    background-image: url('https://store-images.s-microsoft.com/image/apps.32568.68123456111492710.51cc3dc0-11bf-43ae-a36d-36c0c5a5b490.16f8887e-11a3-4f27-b95c-4fd7e6afda75?mode=scale&q=90&h=1080&w=1920');
+    height: 93vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: black;
+    animation: imgZoom infinite 30s;
+}
+
+.Warframe-Page-Intro h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    font-size: 300%;
+    padding-top: 20%;
+    color: white;
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+    text-shadow: 0 0 0.2em #D64836, 0 0 0.2em #D64836, 0 0 0.2em #D64836;
+}
+
+/* Body */
+/* Filter */
+.Warframe-Page-Filter {
+    width: 30%;
+    position: fixed;
+    left: 1%;
+    top: 10%;
+    padding: 1% 0%;
+    background: rgb(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: 'Tomorrow', sans-serif;
+    transition-duration: 0.5s;
+}
+
+.Warframe-Page-Filter:hover {
+    background: rgb(255, 255, 255, 0.55);
+}
+
+.Warframe-Page-Filter:hover input {
+    background: rgb(255, 255, 255, 0.55);
+}
+
+.Warframe-Page-Filter input {
+    width: 50%;
+    border: none ;
+    margin: auto;
+    font-family: 'Tomorrow', sans-serif;
+    background: rgb(255, 255, 255, 0.2);
+}
+
+/* List */
+.Warframe-Page-List {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* Animations */
+@keyframes imgZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}

@@ -1,8 +1,12 @@
+ /* Header */
 .Header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     background: cadetblue;
+    position: fixed;
+    position: 0;
+    width: 100%;
 }
 
 .Header-Link {

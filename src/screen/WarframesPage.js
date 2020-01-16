@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import WarframeCard from '../components/WarframeCard'
 
 // Styles
-import './WarframePage.css'
+import './WarframesPage.css'
 
 const WarframeList = () => {
     const [listFrame, setlistFrame] = useState([])
@@ -26,25 +26,24 @@ const WarframeList = () => {
     // Controlled input
     const handleChange = event => {
         setmyText(event.target.value)
+        // We filter the warframe list to get only the warframe which have the input value contained in their name
         setFilter(listFrame.filter(item => item.name.toLowerCase().includes(event.target.value.toLowerCase())))
     }
 
     return (
         <div className="Warframe-Page">
-            <div>
-                <input type="text" value={myText} onChange={handleChange} />
+            <div className="Warframe-Page-Intro">
+                <h3>Warframe list</h3>
             </div>
-            <div>
-                {isReady ? filter === null ? listFrame.map(item => <WarframeCard warframe={item} />) : filter.map(item => <WarframeCard warframe={item} />) : "Loading.."}
+            <div className="Warframe-Page-Filter">
+                <label htmlFor="filter">Search a Warframe by its name :</label>
+                <input type="text" name="filter" value={myText} onChange={handleChange} />
+            </div>
+            <div className="Warframe-Page-List">
+                {isReady ? filter === null ? listFrame.map((item, index) => <WarframeCard key={index} warframe={item} />) : filter.map((item, index) => <WarframeCard key={index} warframe={item} />) : "Loading.."}
             </div>
         </div>
     )
 }
-
-
-
-
-
-
 
 export default WarframeList
