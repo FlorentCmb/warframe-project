@@ -11,7 +11,7 @@
 }
 /* Hover effects */
 .Warframe-Card:hover {
-    box-shadow: 2px 2px 5px grey;
+    animation: movingShadow 3s infinite;
 }
 
 .Warframe-Card:hover .Warframe-Card-Name {
@@ -35,4 +35,17 @@
 .Warframe-Card-Name {
     font-size: 120%;
     transition-duration: 0.5s;
+}
+
+/* Animations */
+@keyframes movingShadow {
+    0% {
+        box-shadow: 1px 1px 5px rgb(84, 134, 180);
+    }
+    50% {
+        box-shadow: 3px 3px 5px rgb(84, 134, 180);
+    }
+    100% {
+        box-shadow: 1px 1px 5px rgb(84, 134, 180);
+    }
 }
