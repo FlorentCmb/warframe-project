@@ -11,11 +11,30 @@ const Header = () => {
 
 
     useEffect(() => {
-        document.addEventListener("click", e => {
+        let changeColor = setInterval(() => {
             const url = window.location.href
-            let currentPage = url.split('/')
-            currentPage = currentPage[currentPage.length - 1]
-            console.log(currentPage)
+            // let currentPage = url.split('/')
+            // currentPage = currentPage[currentPage.length - 1]
+            switch (true) {
+                case url.includes('warframes'):
+                    document.querySelector('.Header').classList.remove('Default-Theme')
+                    document.querySelector('.Header').classList.remove('Blue-Theme')
+                    document.querySelector('.Header').classList.add('Red-Theme')
+                    // Add a class for Mods page ?
+                    break
+                case url.includes('weapons'):
+                    document.querySelector('.Header').classList.remove('Default-Theme')
+                    document.querySelector('.Header').classList.remove('Red-Theme')
+                    document.querySelector('.Header').classList.add('Blue-Theme')
+                    // Add a class for Mods page ?
+                    break
+                default:
+                    document.querySelector('.Header').classList.remove('Blue-Theme')
+                    document.querySelector('.Header').classList.remove('Red-Theme')
+                    document.querySelector('.Header').classList.add('Default-Theme')
+                    // Add a class for Mods page ?
+                    break
+            }
         })
     })
 
