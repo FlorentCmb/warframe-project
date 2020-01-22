@@ -1,11 +1,75 @@
 .Weapon-Card {
-    color: darkred;
-    border: 2px solid black;
+    background: white;
+    border-radius: 5px;
     width: 23%;
-    margin-top: 1%;
+    margin: 0.5%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition-duration: 0.5s;
+    border: 2px solid transparent;
+}
+
+.Weapon-Card p {
+    font-family: 'Tomorrow', sans-serif;
 }
 
 .Weapon-Img {
-    width: 100%;
+    width: 85%;
     height: auto;
+    transition-duration: 0.5s;
+}
+
+.Card-Desc {
+    font-size: 70%;
+    padding: 5%;
+    color: black;
+}
+
+/* Hover effects */
+
+.Weapon-Card:hover .Weapon-Img {
+    width: 95%;
+}
+
+/* Animation */
+@keyframes specialRed {
+    50% {
+        border: 2px solid rgb(177, 5, 5);
+    }
+}
+
+@keyframes specialBlue {
+    50% {
+        border: 2px solid rgb(34, 156, 156);
+    }
+}
+@keyframes specialGolden {
+    50% {
+        border: 2px solid rgb(204, 175, 10);
+    }
+}
+
+.Wraith {
+    animation: specialRed 3s  infinite;
+}
+
+.Kuva {
+    animation: specialRed 3s  infinite;
+}
+
+.Vandal {
+    animation: specialBlue 3s infinite;
+}
+
+.Prisma {
+    animation: specialBlue 3s infinite;
+}
+
+.Prime {
+    animation: specialGolden 3s infinite;
+}
+
+.Weapon-Img {
+    background: radial-gradient(ellipse at 50%, white, transparent 65%)
 }

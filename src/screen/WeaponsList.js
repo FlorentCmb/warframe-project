@@ -9,10 +9,13 @@ import './WeaponsList.css'
 
 const Weapons = () => {
 
+    // Initializing states
     const [weapons, setweapons] = useState(null)
+    const [filter, setfilter] = useState(null)
+    const [inputValue, setinputValue] = useState('')
     const [isReady, setisReady] = useState(false)
-    // primary.concat(secondary, melee)
 
+    // Function which allow us to import JSON and use it
     const getWeapons = async () => {
         // Require weapons db
         const primary = await require('warframe-items/data/json/Primary.json')
@@ -24,13 +27,29 @@ const Weapons = () => {
         setisReady(true)
     }
 
+    // Equal to componentDidMount, call all weapons
     useEffect(() => {
         getWeapons()
     }, [])
 
+    // Controlled input
+    const handleInput = (e) => {
+        setinputValue(e.target.value)
+        setfilter(weapons.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase())))
+    }
+
     return (
         <div className="Weapon-Page">
-            {isReady ? weapons.map((item, index) => <WeaponCard weapon={item} key={index} />) : "Loading"}
+            <div className="Weapon-Intro">
+                <h3>Weapon list</h3>
+            </div>
+            <div className="Weapon-Filter">
+                <label htmlFor="filter">Search a weapon by its name :</label>
+                <input type="text" name="filter" value={inputValue} onChange={handleInput} placeholder="Search a weapon" />
+            </div>
+            <div className="Weapon-List">
+                {isReady ? filter === null ? weapons.map((item, index) => <WeaponCard weapon={item} key={index} />) : filter.map((item, index) => <WeaponCard weapon={item} key={index} />) : "Loading"}
+            </div>
         </div>
     )
 

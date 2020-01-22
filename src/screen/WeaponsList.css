@@ -1,5 +1,74 @@
 .Weapon-Page {
+    background: rgba(128, 128, 128, 0.13);
+    font-family: 'Tomorrow', sans-serif;
+    padding-top: 4%;
+}
+
+/* Intro */
+.Weapon-Intro {
+    height: 90vh;
+    background-image: url('https://n9e5v4d8.ssl.hwcdn.net/fp-vids/revenant-fallback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: black;
+    animation: imgZoom infinite 30s;
+}
+
+.Weapon-Intro h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    font-size: 300%;
+    padding-top: 20%;
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+    text-shadow: 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253), 0 0 0.2em rgb(92, 202, 253);
+}
+
+/* Body */
+/* Filter (visible) */
+.Weapon-Filter {
+    width: 96%;
+    margin: 0.5% auto;
+    padding: 1% 0%;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: 'Tomorrow', sans-serif;
+}
+/* Filter (after scroll) */
+.Weapon-Filter-Scroll {
+    width: 50%;
+    display: block;
+    position: fixed;
+    position: 5;
+}
+
+.Weapon-Filter input, select {
+    width: 20%;
+    margin: auto;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.Weapon-List {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+/* Animations */
+@keyframes imgZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
 }

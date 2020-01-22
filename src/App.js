@@ -7,6 +7,7 @@ import Home from './screen/Home'
 import WeaponsList from './screen/WeaponsList'
 import WarframesPage from './screen/WarframesPage'
 import Warframe from './screen/Warframe'
+import Weapon from './screen/Weapon'
 import Header from './components/Header'
 
 // Import styles
@@ -30,8 +31,11 @@ const App = () => {
           <Route path='/warframes/:name'>
             <Warframe />
           </Route>
-          <Route path='/weapons'>
+          <Route exact path='/weapons'>
             <WeaponsList />
+          </Route>
+          <Route path='/weapons/:name'>
+            <Weapon />
           </Route>
           <Route>
             {/* Mods */}
