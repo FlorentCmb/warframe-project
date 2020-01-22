@@ -10,9 +10,9 @@
     color: black;
 }
 /* Hover effects */
-.Warframe-Card:hover {
+/* .Warframe-Card:hover {
     box-shadow: 1px 1px 5px rgb(117, 58, 58);
-}
+} */
 
 .Warframe-Card:hover .Warframe-Card-Name {
     letter-spacing: 3pt;
