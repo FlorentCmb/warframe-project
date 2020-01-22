@@ -9,12 +9,6 @@
     width: 100%;
 }
 
-.Header {
-    position: fixed;
-    position: 0;
-    width: 100%;
-}
-
 .Header-Link {
     margin: auto;
     padding: 20px 30px;
