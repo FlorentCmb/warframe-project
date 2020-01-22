@@ -16,8 +16,8 @@ const WarframeList = () => {
     // Get all the warframes
     useEffect(() => {
         const fetchData = async () => {
-            const waframeN = await require('warframe-items/data/json/Warframes.json')
-            setlistFrame(waframeN)
+            const waframeList = await require('warframe-items/data/json/Warframes.json')
+            setlistFrame(waframeList)
         }
         fetchData("warframe-items/data/json/Warframes.json")
         setIsReady(true)
