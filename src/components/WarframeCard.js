@@ -1,15 +1,17 @@
+// Librairies
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-import React, { useState, useEffect } from 'react';
-
-import './WarframeCard.css'; 
+// Styles
+import './WarframeCard.css' 
 
 
 const WarframeCard = ({warframe}) => {
     return (
-        <div className="Warframe-Card">
-            <h1>{warframe.name}</h1>
-            <img  className="Warframe-Img" src ={`./img/${warframe.imageName}`} alt={warframe.name}/>
-        </div>
+        <Link to={`/warframes/${warframe.name}`} className="Warframe-Card">
+            <img  className="Warframe-Card-Img" src ={`../img/${warframe.imageName}`} alt={warframe.name}/>
+            <p className="Warframe-Card-Name">{warframe.name}</p>
+        </Link>
     )
 }
 
