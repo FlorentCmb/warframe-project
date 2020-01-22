@@ -1,6 +1,4 @@
 .Warframe-Page {
-    margin: 0;
-    padding: 0;
     background: rgba(128, 128, 128, 0.13);
     font-family: 'Tomorrow', sans-serif;
     padding-top: 4%;
@@ -8,8 +6,8 @@
 
 /* Intro */
 .Warframe-Page-Intro {
-    background-image: url('https://store-images.s-microsoft.com/image/apps.32568.68123456111492710.51cc3dc0-11bf-43ae-a36d-36c0c5a5b490.16f8887e-11a3-4f27-b95c-4fd7e6afda75?mode=scale&q=90&h=1080&w=1920');
     height: 93vh;
+    background-image: url('https://store-images.s-microsoft.com/image/apps.32568.68123456111492710.51cc3dc0-11bf-43ae-a36d-36c0c5a5b490.16f8887e-11a3-4f27-b95c-4fd7e6afda75?mode=scale&q=90&h=1080&w=1920');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

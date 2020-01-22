@@ -6,7 +6,7 @@
 
 /* Intro */
 .Weapon-Intro {
-    height: 90vh;
+    height: 93vh;
     background-image: url('https://n9e5v4d8.ssl.hwcdn.net/fp-vids/revenant-fallback.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,31 +27,37 @@
 }
 
 /* Body */
-/* Filter (visible) */
+/* Filter */
 .Weapon-Filter {
-    width: 96%;
-    margin: 0.5% auto;
+    width: 20%;
+    position: fixed;
+    left: 1%;
+    top: 10%;
     padding: 1% 0%;
-    background: white;
-    border-radius: 5px;
+    background: rgb(255, 255, 255, 0.2);
+    border-radius: 4px;
     text-align: center;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     font-family: 'Tomorrow', sans-serif;
-}
-/* Filter (after scroll) */
-.Weapon-Filter-Scroll {
-    width: 50%;
-    display: block;
-    position: fixed;
-    position: 5;
+    transition-duration: 0.5s;
 }
 
-.Weapon-Filter input, select {
-    width: 20%;
+.Weapon-Filter:hover {
+    background: rgb(255, 255, 255, 0.55);
+}
+
+.Weapon-Filter:hover input {
+    background: rgb(255, 255, 255, 0.55);
+}
+
+.Weapon-Filter input {
+    width: 60%;
+    border: none ;
     margin: auto;
     font-family: 'Tomorrow', sans-serif;
+    background: rgb(255, 255, 255, 0.2);
 }
 
 /* List */
