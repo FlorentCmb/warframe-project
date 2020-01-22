@@ -3,18 +3,33 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background: cadetblue;
     position: fixed;
     position: 0;
     width: 100%;
 }
-
-.Header {
-    position: fixed;
-    position: 0;
-    width: 100%;
+/* Header themes */
+.Default-Theme {
+    background: rgb(212, 212, 212);
+}
+.Default-Theme > *:hover {
+    background: rgb(187, 187, 187);
 }
 
+.Red-Theme {
+    background: maroon;
+}
+.Red-Theme > *:hover {
+    background: rgb(150, 0, 0);
+}
+
+.Blue-Theme {
+    background: rgb(0, 139, 194);
+}
+.Blue-Theme > *:hover {
+    background: rgb(0, 150, 209);
+}
+
+/* General Header Links settings */
 .Header-Link {
     margin: auto;
     padding: 20px 30px;
@@ -23,9 +38,7 @@
     transition-duration: 0.5s;
     font-family: 'Alata', sans-serif;
 }
-
 .Header-Link:hover {
     cursor: pointer;
-    background: rgb(102, 168, 172);
     color: white;
 }
