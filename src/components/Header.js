@@ -1,11 +1,23 @@
 // Import librairies
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 // Import styles
 import './Header.css'
 
 const Header = () => {
+
+    // Function which change header's styles
+
+
+    useEffect(() => {
+        document.addEventListener("click", e => {
+            const url = window.location.href
+            let currentPage = url.split('/')
+            currentPage = currentPage[currentPage.length - 1]
+            console.log(currentPage)
+        })
+    })
 
     return (
         <div className="Header">
