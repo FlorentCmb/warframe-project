@@ -54,6 +54,7 @@
     font-family: 'Tomorrow', sans-serif;
 }
 
+/* List */
 .Weapon-List {
     display: flex;
     flex-flow: row wrap;
