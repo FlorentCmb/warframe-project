@@ -1,5 +1,5 @@
 .Home-Page {
-    padding-top: 5%;
+    padding-top: 4%;
     color: black;
     margin: 0;
 }
@@ -51,20 +51,26 @@
 /* Team Desc */
 .Home-Team {
     display: flex;
-    flex-direction: row ;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
     
 }
 
 .Profil-Florent {
     height: 100%;
-    width: 50%;
+    width: 33%;
     background-color: #0E0A4E;
    
 }
 
 .Profil-Kevin {
     height: 100%;
-    width: 50%;
+    width: 33%;
     background-color: #9F3C4D;
+}
+
+.Profil-Cyril {
+    height: 100%;
+    width: 34%;
+    background-color: #FA6E47;
 }

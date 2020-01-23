@@ -32,9 +32,15 @@ export default class Home extends React.Component {
                     <div className="Profil-Kevin">
                         Nelo - Kevin Pompelle
                         <img src="../pictures/nelo.png" />
+                    </div>
 
+                    <div className="Profil-Cyril">
+                        Kenshinobi - Cyril Carral
+                        <img src="../pictures/kenshinobi.png" />
                     </div>
                 </div>
+
+
             </div>
         )
     }
