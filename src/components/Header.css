@@ -9,10 +9,10 @@
 }
 /* Header themes */
 .Default-Theme {
-    background: rgb(212, 212, 212);
+    background: #5F2562;
 }
 .Default-Theme > *:hover {
-    background: rgb(187, 187, 187);
+    background: rgb(124, 48, 128);
 }
 
 .Red-Theme {
