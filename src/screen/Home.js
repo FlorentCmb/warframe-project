@@ -27,6 +27,9 @@ export default class Home extends React.Component {
                     <div className="Profil-Florent">
                         Asod - Florent Combeau
                         <img src="../pictures/asod.png" />
+                        <div className="Profil-Bulle">
+                            <a href="youtube.com">YOUTUBE G</a>
+                        </div>
                     </div>
 
                     <div className="Profil-Kevin">
