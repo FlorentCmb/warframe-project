@@ -28,18 +28,24 @@ export default class Home extends React.Component {
                         Asod - Florent Combeau
                         <img src="../pictures/asod.png" />
                         <div className="Profil-Bulle">
-                            <a href="youtube.com">YOUTUBE G</a>
+                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
                         </div>
                     </div>
 
                     <div className="Profil-Kevin">
                         Nelo - Kevin Pompelle
-                        <img src="../pictures/nelo.png" />
+                        <img src="../pictures/nelo.png" target="_blank"/>
+                        <div className="Profil-Bulle">
+                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
+                        </div>
                     </div>
 
                     <div className="Profil-Cyril">
                         Kenshinobi - Cyril Carral
                         <img src="../pictures/kenshinobi.png" />
+                        <div className="Profil-Bulle">
+                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
+                        </div>
                     </div>
                 </div>
 

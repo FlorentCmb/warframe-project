@@ -74,3 +74,11 @@
     width: 34%;
     background-color: #FA6E47;
 }
+
+.Profil-Cyril div {
+    height: 40%;
+    width: 40%;
+    border-radius: solid black;
+    background-color: white;
+    border: 50%;
+}
