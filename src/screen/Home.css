@@ -1,4 +1,4 @@
-.mainHome {
+.Home-Page {
     padding-top: 4%;
 }
 
@@ -6,12 +6,12 @@ h1 {
     color: white;
 }
 
-.lead {
+.Home-Paragraph {
     font-size: 1.5rem;
     color: white;
 }
 
-.first {
+.Home-Warframe {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +27,7 @@ h1 {
     background-size: cover;
 }
 
-.second {
+.Home-Site {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ h1 {
     background-size: cover;
 }
 
-.third {
+.Home-Team {
     display: flex;
     flex-direction: column;
     align-items: center;
