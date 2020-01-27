@@ -28,15 +28,16 @@ export default class Home extends React.Component {
                         Asod - Florent Combeau
                         <img src="../pictures/asod.png" />
                         <div className="Profil-Bulle">
-                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
+                        <a href="https://github.com/florentCmb" target="_blank"><img src="../pictures/github.png" className="Github"></img></a>
+                            <a href="https://www.linkedin.com/in/florent-combeau-51b363172/" target="_blank"><img src="../pictures/linkedin.png" className="Linkedin"></img></a>
                         </div>
                     </div>
 
                     <div className="Profil-Kevin">
                         Nelo - Kevin Pompelle
-                        <img src="../pictures/nelo.png" target="_blank"/>
+                        <img src="../pictures/nelo.png" target="_blank" />
                         <div className="Profil-Bulle">
-                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
+                           
                         </div>
                     </div>
 
@@ -44,7 +45,8 @@ export default class Home extends React.Component {
                         Kenshinobi - Cyril Carral
                         <img src="../pictures/kenshinobi.png" />
                         <div className="Profil-Bulle">
-                            <a href="https://www.youtube.com/?gl=FR&hl=fr" target="_blank">YOUTUBE G</a>
+                            <a href="https://github.com/arsandamus" target="_blank"><img src="../pictures/github.png" className="Github"></img></a>
+                            <a href="https://www.linkedin.com/in/cyril-carral-195906147/" target="_blank"><img src="../pictures/linkedin.png" className="Linkedin"></img></a>
                         </div>
                     </div>
                 </div>

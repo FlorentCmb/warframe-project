@@ -10,6 +10,7 @@
 }
 
 /* Backgrounds */
+
 .Home-Banner {
     display: flex;
     flex-direction: column;
@@ -34,6 +35,7 @@
 }
 
 /* Home Section */
+
 .Home-Section {
     align-items: center;
     text-align: center;
@@ -49,25 +51,48 @@
 /* Site Desc */
 
 /* Team Desc */
+
 .Home-Team {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    
 }
+
+/*--------------*/
+/*Florent's page */
+/*--------------*/
 
 .Profil-Florent {
     height: 100%;
     width: 33%;
     background-color: #0E0A4E;
-   
 }
+
+.Profil-Florent div {
+    height: 40%;
+    width: 40%;
+    border: 50%;
+}
+
+/*--------------*/
+/*Kevin's page */
+/*--------------*/
 
 .Profil-Kevin {
     height: 100%;
     width: 33%;
     background-color: #9F3C4D;
 }
+
+.Profil-Kevin div {
+    height: 40%;
+    width: 40%;
+    border: 50%;
+}
+
+/*--------------*/
+/*Cyril's page */
+/*--------------*/
 
 .Profil-Cyril {
     height: 100%;
@@ -78,7 +103,16 @@
 .Profil-Cyril div {
     height: 40%;
     width: 40%;
-    border-radius: solid black;
-    background-color: white;
     border: 50%;
+}
+
+/* Logo import */
+
+.Github {
+    width: 35%;
+    border-radius: 100%;
+}
+
+.Linkedin {
+    width: 45%;
 }
